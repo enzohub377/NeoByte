@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100dvh;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+form {
+  background-color: white;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 2px solid #8a2be2;
+  height: 100dvh;
+  width: 30%;
+  gap: 25px;
+}
+
+header {
+  text-align: center;
+  width: 70%;
+  padding: 0 15px;
+  border-radius: 15px;
+  box-shadow:
+    rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+h1 {
+  font-family: auto;
+  color: #7712ba;
+  font-size: 3em;
+}
+
+.Fill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  width: 70%;
+}
+
+.Fill__field {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.Fill__field label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  color: #15013c;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.Fill__field input:focus ~ label,
+.Fill__field input:not(:placeholder-shown) ~ label {
+  top: 0;
+  transform: translateY(-75%) scale(.90);
+  color: white;
+  background-color: #15013c;
+}
+
+.Fill__field input:not(:placeholder-shown):invalid {
+  border: 2px solid red;
+}
+
+input {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background: transparent;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.To-Enter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Vind {
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 70%;
+  font-size: 1.25em;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #4b0d84 0%, #15013c 50%, #7712ba 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.5s ease-in-out;
+  color: white;
+  cursor: pointer;
+}
+
+.Vind:hover {
+  background-position: 0% 0;
+}
+
+.Change {
+  text-decoration: none;
+  color: #4b0d84;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  padding: 0 0 1.5px 0;
+}
+
+.Change::after {
+  transition: width 1s ease;
+  content: "";
+  position: absolute;
+  height: 1.5px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background: #15013c;
+  border-radius: 10px;
+}
+
+.Change:hover::after {
+  width: 100%;
+  will-change: transform;
+}
+
+.Background {
+  height: 100dvh;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .Background-Frame {
+    border-left: 3px solid #15013c;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  }
+
+  & img {
+    height: 600px;
+    width: 105%;
+    border-radius: 15px;
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
