@@ -117,10 +117,19 @@ input {
   transition: background-position 0.5s ease-in-out;
   color: white;
   cursor: pointer;
+
+  & a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .Vind:hover {
   background-position: 0% 0;
+}
+
+p {
+  font-size: 20px;
 }
 
 .Change {
