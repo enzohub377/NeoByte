@@ -1,46 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login NeoByte</title>
-</head>
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../Assets/Icon.png" type="image/png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro NeoByte</title>
+  </head>
 
-<body>
-
+  <body>
     <form action="#">
-        <header>
-            <h1>Cadastro</h1>
-        </header>
+      <header>
+        <h1>Cadastro</h1>
+      </header>
 
-        <div class="Fill">
-            <label for="nome">Email</label>
-            <input type="email" name="nome" required>
-
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" required>
+      <div class="Fill">
+        <div class="Fill__field">
+          <input
+            type="email"
+            name="email"
+            required
+            pattern=".+gmail\.com|.+hotmail\.com"
+            placeholder=" "
+            title="Por favor, insira um e-mail válido do Gmail ou Hotmail."
+          />
+          <label for="email">Email</label>
         </div>
 
-        <div class="To-Enter">
-            <a class="Vind" href="">Entrar</a>
-            <h2>Já tem uma conta?</h2>
-            <a class="Change" href="http://127.0.0.1:5500/Login%20da%20NeoByte/index.html">Faça o seu Login</a>
+        <div class="Fill__field">
+          <input
+            id="password"
+            type="password"
+            name="senha"
+            required
+            placeholder=" "
+            title="Insira a sua senha."
+          />
+          <label for="password">Senha</label>
         </div>
+      </div>
+
+      <div class="To-Enter">
+        <button class="Vind" type="submit">Entrar</button>
+        <p>Já tem uma conta?</p>
+        <a
+          class="Change"
+          href="http://127.0.0.1:5500/Login/index.html?email=a%40gmail.com&senha=a#"
+          >Faça o seu Login</a
+        >
+      </div>
     </form>
 
     <div class="Background">
-        <div class="Background-Frame">
-            <img src="../Assets/Form-Background.png" alt="">
-        </div>
+      <div class="Background-Frame">
+        <img src="../Assets/Form-Background.png" alt="" />
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

@@ -55,23 +55,45 @@ h1 {
   width: 70%;
 }
 
-label {
-  color: #15013c;
-  text-align: left;
+.Fill__field {
+  position: relative;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.Fill__field label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  color: #15013c;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.Fill__field input:focus ~ label,
+.Fill__field input:not(:placeholder-shown) ~ label {
+  top: 0;
+  transform: translateY(-75%) scale(.90);
+  color: white;
+  background-color: #15013c;
+}
+
+.Fill__field input:not(:placeholder-shown):invalid {
+  border: 2px solid red;
 }
 
 input {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background: transparent;
   width: 100%;
-  border: 1.60px solid #4b0d84;
   border-radius: 5px;
-  padding: 5px 10px;
-  transition: box-shadow 1.5s ease;
-}
-
-input:hover {
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
 }
 
 .To-Enter {
@@ -95,10 +117,19 @@ input:hover {
   transition: background-position 0.5s ease-in-out;
   color: white;
   cursor: pointer;
+
+  & a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .Vind:hover {
   background-position: 0% 0;
+}
+
+p {
+  font-size: 20px;
 }
 
 .Change {
@@ -118,7 +149,7 @@ input:hover {
   width: 0;
   left: 0;
   bottom: 0;
-  background: black;
+  background: #15013c;
   border-radius: 10px;
 }
 
