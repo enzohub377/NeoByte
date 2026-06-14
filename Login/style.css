@@ -71,6 +71,7 @@ h1 {
   color: #15013c;
   border-radius: 5px;
   padding: 0 5px;
+  user-select: none;
 }
 
 .Fill__field input:focus ~ label,
@@ -83,6 +84,22 @@ h1 {
 
 .Fill__field input:not(:placeholder-shown):invalid {
   border: 2px solid red;
+}
+
+#toggle {
+  position: absolute;
+  top: 25%;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: url(../Assets/Visible.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+#toggle.hide {
+  background: url(../Assets/Not-Visible.png);
+  background-size: cover;
 }
 
 input {
@@ -102,7 +119,7 @@ input {
   flex-direction: column;
 }
 
-.Vind {
+button {
   text-decoration: none;
   text-align: center;
   padding: 5px;
@@ -124,7 +141,7 @@ input {
   }
 }
 
-.Vind:hover {
+button:hover {
   background-position: 0% 0;
 }
 
