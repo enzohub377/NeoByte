@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Assets/CSS/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,7 +11,7 @@
     <link rel="icon" href="../Assets/Icon.png" type="image/png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro NeoByte</title>
+    <title>Login NeoByte</title>
   </head>
 
   <body>
@@ -43,15 +43,14 @@
             title="Insira a sua senha."
           />
           <label for="password">Senha</label>
+          <div id="toggle" onclick="showHide()"></div>
         </div>
       </div>
 
       <div class="To-Enter">
-        <button class="Vind" type="submit">Entrar</button>
-        <p>Já tem uma conta?</p>
-        <a
-          class="Change"
-          href="http://127.0.0.1:5500/Login/index.html?email=a%40gmail.com&senha=a#"
+        <button type="submit">Cadastrar</button>
+        <p>Ainda já tem uma conta?</p>
+        <a class="Change" href="../Login/index.html"
           >Faça o seu Login</a
         >
       </div>
@@ -62,5 +61,7 @@
         <img src="../Assets/Form-Background.png" alt="" />
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

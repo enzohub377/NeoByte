@@ -71,6 +71,7 @@ h1 {
   color: #15013c;
   border-radius: 5px;
   padding: 0 5px;
+  user-select: none;
 }
 
 .Fill__field input:focus ~ label,
@@ -85,6 +86,22 @@ h1 {
   border: 2px solid red;
 }
 
+#toggle {
+  position: absolute;
+  top: 25%;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: url(../Assets/Visible.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+#toggle.hide {
+  background: url(../Assets/Not-Visible.png);
+  background-size: cover;
+}
+
 input {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   background: transparent;
@@ -93,7 +110,7 @@ input {
   padding: 10px 10px;
   border: none;
   outline: none;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .To-Enter {
@@ -102,7 +119,7 @@ input {
   flex-direction: column;
 }
 
-.Vind {
+button {
   text-decoration: none;
   text-align: center;
   padding: 5px;
@@ -124,7 +141,7 @@ input {
   }
 }
 
-.Vind:hover {
+button:hover {
   background-position: 0% 0;
 }
 
@@ -137,25 +154,7 @@ p {
   color: #4b0d84;
   font-weight: bold;
   cursor: pointer;
-  position: relative;
   padding: 0 0 1.5px 0;
-}
-
-.Change::after {
-  transition: width 1s ease;
-  content: "";
-  position: absolute;
-  height: 1.5px;
-  width: 0;
-  left: 0;
-  bottom: 0;
-  background: #15013c;
-  border-radius: 10px;
-}
-
-.Change:hover::after {
-  width: 100%;
-  will-change: transform;
 }
 
 .Background {
@@ -180,4 +179,12 @@ p {
       rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
       rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(root) {
+  animation-duration: 1.5s;
 }
