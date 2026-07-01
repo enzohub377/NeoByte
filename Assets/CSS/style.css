@@ -92,13 +92,13 @@ h1 {
   right: 20px;
   width: 30px;
   height: 30px;
-  background: url(../Assets/Visible.png);
+  background: url(../Visible.png);
   background-size: cover;
   cursor: pointer;
 }
 
 #toggle.hide {
-  background: url(../Assets/Not-Visible.png);
+  background: url(../Not-Visible.png);
   background-size: cover;
 }
 
