@@ -127,7 +127,7 @@ button {
   padding: 5px;
   border-radius: 15px;
   border: none;
-  width: 60%;
+  width: 100%;
   font-size: 1.25em;
   margin-bottom: 20px;
   background: linear-gradient(135deg, #4b0d84 0%, #15013c 50%, #7712ba 100%);

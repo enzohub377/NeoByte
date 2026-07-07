@@ -8,19 +8,23 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="../Assets/Icon.png" type="image/png" />
+    <link rel="icon" href="../assets/Icon.png" type="image/png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login NeoByte</title>
   </head>
 
   <body>
-    <form action="#">
+    <form action="#" method="post">
       <header>
         <h1>Cadastro</h1>
       </header>
 
-      <div class="Fill">
+      <div id="formRegister" class="Fill">
+        <div class="Fill__field">
+          <input type="text" name="nome" required placeholder=" " title="Crie seu nome de usuário" />
+          <label for="name">Nome</label>
+        </div>
         <div class="Fill__field">
           <input
             type="email"
@@ -50,15 +54,13 @@
       <div class="To-Enter">
         <button type="submit">Cadastrar</button>
         <p>Já tem uma conta?</p>
-        <a class="Change" href="../Login/index.html"
-          >Faça o seu Login</a
-        >
+        <a class="Change" href="../login/index.html">Faça o seu Login</a>
       </div>
     </form>
 
     <div class="Background">
       <div class="Background-Frame">
-        <img src="../Assets/Form-Background.png" alt="" />
+        <img src="../assets/Form-Background.png" alt="" />
       </div>
     </div>
 
