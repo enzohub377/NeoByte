@@ -85,4 +85,4 @@ Sinta-se livre para estudar, adaptar e evoluir o código 🚀
 
 👨‍💻 Autor
 
-Projeto desenvolvido por piresenzo75@gmail.com
+Projeto desenvolvido por enzoideias01@gmail.com
